@@ -1,14 +1,13 @@
 import React from 'react';
-const Filter = ({ filterData }) => {
+const Filter = (props) => {
+    let filterData = props.filterData;
     return (
         <div>
-            {filterData?.map((data) => {
+            {filterData.map((data) => {
                 return (
-                    <div>
-                        <button>
-                            {data.title}
-                        </button>
-                    </div>
+                    <button key={data.id}>
+                        {data.title}
+                    </button>
                 )
             })}
         </div>
